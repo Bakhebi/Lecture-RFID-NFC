@@ -73,7 +73,6 @@ def discovery_loop(nfc, id):
                 print_debug('Checking if card with UID: [{:s}] is listed in VALID_CARDS...'.format(binascii.hexlify(uid[:uid_len],' ').upper()))
                 msgclaire = (binascii.hexlify(uid[:uid_len],' ').upper())
                 mqttClient.publish(topic="listeappel", msg= msgclaire)
-                pycom.rgbled(RGB_GREEN)
                 print(msgclaire.decode('utf-8'))
 
         else:
