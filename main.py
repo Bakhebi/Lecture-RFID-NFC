@@ -84,14 +84,6 @@ def discovery_loop(nfc, id):
         time.sleep(.5)
         nfc.mfrc630_cmd_init()
 
-def DataSending():
-    if wlan.isconnected():
-        print("OuiWIFI")
-    else :
-        print("NONWIFI")
-
-# def DataReceiving():
-
 # This is the start of our main execution... start the thread
 _thread.start_new_thread(discovery_loop, (nfc, 0))
 _thread.start_new_thread(send_sensor_data, ('Thread 2', 10))
