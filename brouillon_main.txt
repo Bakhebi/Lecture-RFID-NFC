@@ -1,13 +1,3 @@
-'''
-Simple Pyscan NFC / MiFare Classic Example
-Copyright (c) 2020, Pycom Limited.
-
-This example runs the NFC discovery loop in a thread.
-If a card is detected it will read the UID and compare it to VALID_CARDS
-RGB LED is BLUE while waiting for card,
-GREEN if card is valid, RED if card is invalid
-'''
-
 DEBUG = False  # change to True to see debug messages
 
 from pyscan import Pyscan
